@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #E5E5E5;
+    background-size: cover;
+}
+
+.btn {
+    width: 100%;
+    background: #5C6DFF;
+    border-radius: 15px;
+    color: white;
+    font-size: 20px;
+    width: 420px;
+    height: 70px;
+    margin-top: 50px;
+}
