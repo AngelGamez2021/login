@@ -1,45 +1,46 @@
 <div class="container">
 
+    <span *ngIf="submitted && signForm.invalid" id="span">Todos los campos son obligatorios</span>
 
-    <form action="">
+
+    <form [formGroup]="signForm" (ngSubmit)="signUser()">
 
         <div class="card">
             <div class="title">Sign Up</div>
             <br>
 
+
             <div class="labelInput">
-
-
 
                 <div>
                     <label for="name">Name</label> <br>
-                    <input type="text" placeholder="Your name">
+                    <input type="text" class="form-control" formControlName="name" placeholder="Your name">
                 </div>
                 <div>
                     <label for="Second name">Second name</label><br>
-                    <input type="text" placeholder="Your second name">
+                    <input type="text" class="form-control" formControlName="lastName" placeholder="Your second name">
                 </div>
 
                 <div>
                     <label for="Last name">Last name</label><br>
-                    <input type="text" placeholder="Your last name">
+                    <input type="text" class="form-control" formControlName="secondName" placeholder="Your last name">
                 </div>
 
                 <div>
                     <label for="PhoneNumer">Phone number</label><br>
-                    <input type="text" placeholder="Your number">
+                    <input type="text" class="form-control" formControlName="phoneNumber" placeholder="Your number">
                 </div>
 
                 <div>
                     <label for="id">ID</label><br>
-                    <input type="text" placeholder="Your id">
+                    <input type="text" class="form-control" formControlName="id" placeholder="Your id">
                 </div>
                 <br>
             </div>
             <br>
             <div>
                 <label for="newPassword">Create your password</label><br>
-                <input class="inputPass" type="text" placeholder="Your password">
+                <input class="inputPass" class="form-control" formControlName="createPass" type="text" placeholder="Your password">
             </div>
             <br>
 

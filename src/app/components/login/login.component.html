@@ -1,7 +1,8 @@
 <div class="container">
 
+    <span *ngIf="submitted && loginForm.invalid" id="span">Todos los campos son obligatorios</span>
 
-    <form action="">
+    <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
 
         <div class="card">
 
@@ -13,14 +14,14 @@
 
             <div>
                 <label for="emailAddress" class="labelUser">Email address</label>
-                <input type="text" placeholder="sncndic@gmail.com">
+                <input type="text" class="form-control" formControlName="email" placeholder="sncndic@gmail.com">
             </div>
             <div>
                 <label for="password" class="labelPass">Password</label>
-                <input type="password" placeholder="Enter your pasword">
+                <input type="password" class="form-control" formControlName="password" placeholder=" Enter your pasword ">
             </div>
 
-            <button class="btn" type="submit" value="login">sign in</button>
+            <button class="btn " type="submit " value="login ">sign in</button>
 
         </div>
 
