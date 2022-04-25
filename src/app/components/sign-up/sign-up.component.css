@@ -22,7 +22,20 @@
     flex-direction: row;
 }
 
+.titles {
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr;
+}
+
 .title {
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    margin-bottom: 68px;
+    font-weight: 700;
+    color: #DBDBDB !important;
+}
+
+.titleRight {
     font-family: 'Inter', sans-serif;
     font-size: 40px;
     margin-bottom: 68px;

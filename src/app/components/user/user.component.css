@@ -64,10 +64,36 @@
     padding-left: 89px;
     width: 693px;
     height: 215px;
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr;
+}
+
+.h1Print {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 50px;
+    padding-bottom: 28px;
+}
+
+.download {
+    text-align: right;
+    width: 112px;
+    height: 109px;
+    /* margin-left: 400px; */
+    padding-top: 55px;
+    margin-left: 279px;
+    padding-bottom: 60px;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #AAAAAA;
 }
 
 .cardNoMessage {
-    /* margin: 10px; */
     border-radius: 20px;
     overflow: hidden;
     background: white;
@@ -75,18 +101,19 @@
     cursor: default;
     transition: all 400ms ease;
     margin-bottom: 16px;
-    margin-right: 0px;
 }
 
 .cardNoMessage-message {
-    padding-left: 89px;
-    padding-top: 61px;
-    padding-bottom: 65px;
-    padding-right: 89px;
-    padding-left: 89px;
-    width: 718px;
-    height: 786px;
+    padding-top: 217px;
+    /* padding-bottom: 65px; */
+    padding-right: 219px;
+    padding-left: 219px;
+    text-align: center;
+    height: 870px;
 }
+
+
+/* .imagenNoMessage {} */
 
 .perfil {
     width: 112px;
@@ -98,4 +125,9 @@
     font-size: 24px;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
+}
+
+.contendoCard {
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr;
 }

@@ -21,12 +21,26 @@
     padding: 60px;
 }
 
+.titles {
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr;
+}
+
 .title {
     font-family: 'Inter', sans-serif;
     font-size: 40px;
     margin-bottom: 68px;
+    margin-right: 42px;
     font-weight: 700;
     flex-direction: row;
+}
+
+.titleRight {
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    margin-bottom: 68px;
+    font-weight: 700;
+    color: #DBDBDB !important;
 }
 
 label {
