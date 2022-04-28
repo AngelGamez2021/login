@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'signUp', component: SignUpComponent},
   {path: 'cardList', component: CardsComponent},
   {path: 'user', component: UserComponent},
-  {path: 'editUser', component: ModalEditUserComponent},
+  {path: 'editUser/:id', component: ModalEditUserComponent},
 
 ];
 

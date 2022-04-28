@@ -10,8 +10,11 @@ import { CardsComponent } from './components/cards/cards.component';
 import { ModalEditUserComponent } from './components/modal-edit-user/modal-edit-user.component';
 import { UserComponent } from './components/user/user.component';
 
+import {HttpClientModule} from '@angular/common/http'
+
 //formularios
 import { ReactiveFormsModule } from '@angular/forms';
+import { UserTableComponent } from './components/user-table/user-table.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +23,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     SignUpComponent,
     CardsComponent,
     ModalEditUserComponent,
-    UserComponent
+    UserComponent,
+    UserTableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
 
   ],
   providers: [],

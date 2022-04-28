@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
+import { User } from '../../interfaces/user.interface';
+
 
 @Component({
   selector: 'app-cards',
@@ -6,38 +9,42 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
+  
+  rowData: User[] = [];
+  colData: any[] = [
+    {
+      text: 'User Name',
+      type: 'userName',
+    },
+    {
+      text: 'Number',
+      type: 'number',
+    },
+    {
+      text: 'Email',
+      type: 'emailAddress',
+    },
+    {
+      text: 'Star date',
+      type: 'starDate',
+    },
+   
+  ];
 
-  // colData: titleData[] = [
-  //   {
-  //     type: 'name',
-  //     text: 'Nombre',
-  //     tam: '15%',
-  //   },
-  //   {
-  //     type: 'dni',
-  //     text: 'Documento',
-  //     tam: '10%',
-  //   },
-  //   {
-  //     type: 'email',
-  //     text: 'Correo',
-  //     tam: '15%',
-  //   },
-  //   {
-  //     type: 'description',
-  //     text: 'Descripción',
-  //     tam: '20%',
-  //   },
-  //   {
-  //     type: 'enabled',
-  //     text: 'Estado',
-  //     tam: '5%',
-  //   },
-  // ];
-
-  constructor() { }
+  constructor(private _userService: UserService) { }
 
   ngOnInit(): void {
+    this.readUser();
+
   }
 
-}
+  readUser(){
+    this._userService.getUsers().subscribe(data =>{
+      console.log(data);
+      this.rowData = data;
+     }, error =>{
+       console.log(error);
+    })
+  }
+
+} 

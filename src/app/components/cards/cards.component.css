@@ -30,14 +30,12 @@
 
 h1 {
     font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 19px !important;
 }
 
-input {
-    margin-top: 19px;
+.buscar {
     /* size: 100px;
     background-color: white; */
     width: 190px;
@@ -53,4 +51,25 @@ input {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 8px;
+}
+
+
+
+.check{
+    width: 20px;
+    height: 20px;
+    background: #E1E1E1;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-bottom: 70px !important;
+    margin-right: 31px !important;
+    margin-left: 43px !important; 
+    margin-top: 35px !important;
+}
+
+th{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #1D1E29;
 }
