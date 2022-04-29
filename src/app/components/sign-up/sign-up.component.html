@@ -1,14 +1,14 @@
 <div class="container">
 
-    <span *ngIf="submitted && signForm.invalid" id="span">Todos los campos son obligatorios</span>
+    <!-- <span *ngIf="submitted && formSign.invalid" id="span">Todos los campos son obligatorios</span> -->
 
 
-    <form [formGroup]="signForm" (ngSubmit)="signUser()">
+    <form [formGroup]="formSign" (ngSubmit)="onSubmit()">
 
         <div class="card">
 
             <div class="titles">
-                <div class="title"  routerLink="/login">Sign In</div>
+                <div class="title" routerLink="/login">Sign In</div>
                 <div class="titleRight"> Sing up </div>
             </div>
 
@@ -16,38 +16,43 @@
             <div class="labelInput">
 
                 <div>
-                    <label for="name">Name</label> <br>
-                    <input type="text" class="form-control" formControlName="name" placeholder="Your name">
+                    <label class="labelMargin" for="userName">User name</label> <br>
+                    <input type="text" class="form-control" formControlName="userName" placeholder="Your user name">
                 </div>
                 <div>
-                    <label for="Second name">Second name</label><br>
+                    <label class="labelMargin" for="Second name">Second name</label><br>
                     <input type="text" class="form-control" formControlName="lastName" placeholder="Your second name">
                 </div>
 
                 <div>
-                    <label for="Last name">Last name</label><br>
+                    <label class="labelMargin" for="Last name">Last name</label><br>
                     <input type="text" class="form-control" formControlName="secondName" placeholder="Your last name">
                 </div>
 
                 <div>
-                    <label for="PhoneNumer">Phone number</label><br>
+                    <label class="labelMargin" for="phoneNumer">Phone number</label><br>
                     <input type="text" class="form-control" formControlName="phoneNumber" placeholder="Your number">
                 </div>
 
                 <div>
-                    <label for="id">ID</label><br>
-                    <input type="text" class="form-control" formControlName="id" placeholder="Your id">
+                    <label class="labelMargin" for="id">ID</label><br>
+                    <input type="text" class="form-control" formControlName="id" placeholder="Your ID">
+                </div>
+                <div>
+                    <label class="labelMargin" for="emailAddress">Email</label><br>
+                    <input type="text" class="form-control" formControlName="emailAddress" placeholder="Your Email">
                 </div>
                 <br>
             </div>
             <br>
             <div>
-                <label for="newPassword">Create your password</label><br>
-                <input class="inputPass" class="form-control" formControlName="createPass" type="text" placeholder="Your password">
+                <label class="labelPass" for="password">Create your password</label><br>
+                <input class="inputPass" formControlName="password" type="password" placeholder="Your password">
             </div>
             <br>
 
-            <button class=" btn " type="submit " value="login ">Sign in</button>
+            <button [ngClass]="{'disable': formSign.invalid}" class="btn" [disabled]="formSign.invalid" type="submit "
+                value="login">Sign up</button>
 
         </div>
 

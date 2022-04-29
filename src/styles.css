@@ -1,6 +1,7 @@
 body {
     background-color: #f6f4f4;
     background-size: cover;
+    
 }
 
 .btn {
@@ -9,9 +10,8 @@ body {
     border-radius: 15px;
     color: white;
     font-size: 20px;
-    width: 420px;
     height: 70px;
-    margin-top: 50px;
+    margin-top: 20px;
     cursor: pointer;
 }
 

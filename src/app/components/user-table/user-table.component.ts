@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 import { User } from '../../interfaces/user.interface';
 
@@ -16,24 +17,27 @@ export class UserTableComponent implements OnInit {
   gridData: any[] = [];
   titleData: any[] = [];
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private _userService: UserService) { }
 
   ngOnInit(): void {
-    // this.readUser();
   }
 
   ngOnChanges() {
     this.gridData = this.rowData;
     this.titleData = this.colData;
+    
   }
 
-  // readUser(){
-  //   this._userService.getUsers().subscribe(data =>{
-  //     console.log(data);
-  //     this.listUser = data;
-  //    }, error =>{
-  //      console.log(error);
-  //   })
-  // }
+
+  removeUser(id: string){
+    this._userService.deleteUser(id).subscribe(data =>{
+      console.log(data);
+      this.router.navigate(['/cardList']);
+     }, error =>{
+       console.log(error);
+    })
+   }
 
 }

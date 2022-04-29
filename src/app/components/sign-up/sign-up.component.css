@@ -46,15 +46,16 @@
     display: grid;
     grid-template-columns: 0.8fr 0.8fr;
     grid-gap: 10px;
+    margin-bottom: 12px;
 }
 
-label {
+.labelMargin {
     color: #6B6B6B;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
 }
 
-input {
+.form-control {
     width: 60%;
     background-color: #F1F1F1;
     margin-bottom: 20px;
@@ -66,8 +67,29 @@ input {
     opacity: 70%;
     font-weight: 400;
     border-radius: 10px;
+    color: #6B6B6B;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+
+}
+
+.labelPass {
+    color: #6B6B6B;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
 }
 
 .inputPass {
-    width: 360px !important;
+    width: 80%;
+    background-color: #F1F1F1;
+    margin-top: 12px;
+    border: none;
+    padding: 15px 24px;
+    padding-right: 40px !important;
+    font-family: 'Inter', sans-serif;
+    opacity: 70%;
+    font-weight: 400;
+    border-radius: 10px;
+    color: #6B6B6B;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+
 }

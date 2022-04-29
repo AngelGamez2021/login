@@ -14,13 +14,13 @@ export class LoginComponent implements OnInit {
 
   messageError = {
 
-    email: {
-      required: 'Requerid Email',
-      pattern: 'Email invalid',
+    emailAddress: {
+      required: 'Email requerid',
+      pattern: 'Invalid Email ',
     },
     password: {
       required: 'Password requerid',
-      minLength: 'Password Invalid',
+      minLength: 'Invalid Password',
     },
 
   };
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.formLogin = this.fb.group({
-      email: ['', [Validators.required, Validators.pattern(/^[A-z]+[a-zA-Z0-9._]+@[a-z]+\.[a-z.]{2,6}$/),],],
+      emailAddress: ['', [Validators.required, Validators.pattern(/^[A-z]+[a-zA-Z0-9._]+@[a-z]+\.[a-z.]{2,6}$/),],],
       password: ['', [Validators.required, Validators.minLength(8)]],
     });
     this.loginUser();
@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
     if( this.submitted = true){
       // this.loginUser.controls.password.diable();
       const form = {
-        email: this.formLogin.value.email,
+        emailAddress: this.formLogin.value.emailAddress,
         password: this.formLogin.value.password,
       };
 
@@ -56,19 +56,8 @@ export class LoginComponent implements OnInit {
   }
 
 
-  // onSubmit() {
-  //   if (!this.formLogin.invalid) {
-  //     if (this.submitted === true) {
-  //       console.log('Registrado con exito');
-        
-  //     } else {
-
-  //       console.log('Registrado con exito');
-        
-
-  //     }
-  //   }
-  // }
+  onSubmit() { 
+  }
 
  getError(nameError: string): string {
     // if (!this.formLogin.get(nameError).touched) {

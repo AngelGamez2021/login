@@ -7,15 +7,7 @@
                     <input type="checkbox" class="check" />
                 </th>
                 <th *ngFor="let data of titleData">
-                    <p>{{ data.text }}</p>
-                </th>
-                <th>
-                    <p>Card</p>
-
-                </th>
-                <th>
-
-                    <p>Edit</p>
+                    <p class="titles">{{ data.text }}</p>
                 </th>
             </tr>
         </thead>
@@ -30,14 +22,17 @@
                    <img src="../../../assets/perfil-del-usuario.png"> 
                 </td> -->
                 <td>
-                    <p>{{user.userName}}</p>
+                    <p class="info">{{user.userName}}</p>
                 </td>
                 <td>
-                    <p>987654321</p>
+                    <p class="info">987654321</p>
                 </td>
                 <td>
 
-                    <p>{{user.emailAddress}}</p>
+                    <p class="info">{{user.emailAddress}}</p>
+                </td>
+                <td>
+                    <p class="info"> May,1,2022</p>
                 </td>
 
                 <td>
@@ -45,11 +40,11 @@
                 </td>
 
                 <td>
-                    <img class="image"  src="../../../assets/lapiz.png" routerLink="/editUser/:id">
+                    <img class="image" src="../../../assets/lapiz.png" routerLink="/editUser/:id">
                 </td>
 
                 <td>
-                    <img class="image"  src="../../../assets/eliminiar.png">
+                    <img (click)="removeUser(user.id)" class="image" src="../../../assets/eliminiar.png">
                 </td>
             </tr>
         </tbody>

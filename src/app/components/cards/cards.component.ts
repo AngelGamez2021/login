@@ -28,6 +28,15 @@ export class CardsComponent implements OnInit {
       text: 'Star date',
       type: 'starDate',
     },
+    {
+      text: 'Card',
+    },
+    {
+      text: 'Edit',
+    },
+    {
+      text: 'Delete',
+    },
    
   ];
 
@@ -46,5 +55,7 @@ export class CardsComponent implements OnInit {
        console.log(error);
     })
   }
+
+
 
 } 

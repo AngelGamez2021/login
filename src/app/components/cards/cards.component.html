@@ -1,13 +1,20 @@
 <div class="container">
 
-    <div class="card card-title"> Carnet ID </div>
+    <div class="card card-title"> 
+    <p>
+        Carnet ID 
+    </p>
+    <img routerLink="/login" src="../../../assets/previous page.png" >
+    </div>
 
 
     <div class="card card-title-filter">
         <h1>Users</h1>
         <input class="buscar" type="search" placeholder="search">
     </div>
+<div class="card">
 
-<app-user-table [rowData]="rowData" [colData]="colData"></app-user-table>
+    <app-user-table [rowData]="rowData" [colData]="colData"></app-user-table>
+</div>
 
 </div>
