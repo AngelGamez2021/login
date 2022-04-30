@@ -1,7 +1,8 @@
 .container {
     margin: none;
     width: auto;
-    padding: 40px;
+    padding: 2px;
+
 }
 
 .card {
@@ -16,11 +17,19 @@
     margin-bottom: 16px;
 }
 
+
 .card-title {
+    display: flex;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 22px;
     padding: 20px 40px;
+    justify-content: space-between;
+}
+p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    /* margin-right: 1220.24px; */
 }
 
 .cuadriculas {
@@ -29,7 +38,6 @@
 }
 
 .cardUser {
-    /* margin: 10px; */
     display: flex;
     border-radius: 20px;
     background: white;
@@ -41,7 +49,10 @@
     padding: 90px;
     width: 693px;
     height: 551px;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr;
+    /* align-items: center ; */
+  
 }
 
 .cardPrint {
@@ -122,6 +133,7 @@ p {
 }
 
 .labelName {
+    text-align: center;
     font-size: 24px;
     font-family: 'Inter', sans-serif;
     font-weight: 600;

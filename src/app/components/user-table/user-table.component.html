@@ -36,11 +36,11 @@
                 </td>
 
                 <td>
-                    <img class="image" src="../../../assets/vista.png">
+                    <img routerLink="/user"class="image" src="../../../assets/vista.png">
                 </td>
 
                 <td>
-                    <img class="image" src="../../../assets/lapiz.png" routerLink="/editUser/:id">
+                    <img (click)="editUser(user.id)" class="image" src="../../../assets/lapiz.png">
                 </td>
 
                 <td>

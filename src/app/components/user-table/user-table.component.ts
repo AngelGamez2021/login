@@ -22,6 +22,7 @@ export class UserTableComponent implements OnInit {
     private _userService: UserService) { }
 
   ngOnInit(): void {
+    
   }
 
   ngOnChanges() {
@@ -31,13 +32,26 @@ export class UserTableComponent implements OnInit {
   }
 
 
+
   removeUser(id: string){
     this._userService.deleteUser(id).subscribe(data =>{
-      console.log(data);
+      console.log(id);
       this.router.navigate(['/cardList']);
      }, error =>{
        console.log(error);
     })
    }
 
+   editUser(id: string){
+     this._userService.updateUser(id).subscribe(data => {
+      console.log(id);
+      this.router.navigate(['/editUser/', id])
+     }, error => {
+       console.log(error);
+     
+
+     })
+   
+    }
+ 
 }
