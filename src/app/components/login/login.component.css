@@ -69,3 +69,8 @@ input {
     font-family: 'Inter', sans-serif;
     color: red;
 }
+
+.margen input{
+
+    margin-bottom: 0%;
+}

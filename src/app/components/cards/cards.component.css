@@ -35,6 +35,12 @@ p{
     padding-bottom: 0px !important;
 }
 
+.card-info{
+    padding: 20px 40px;
+
+
+}
+
 h1 {
     font-family: 'Inter', sans-serif;
     font-weight: 600;

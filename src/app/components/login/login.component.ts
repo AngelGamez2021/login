@@ -59,15 +59,28 @@ export class LoginComponent implements OnInit {
   onSubmit() { 
   }
 
- getError(nameError: string): string {
-    // if (!this.formLogin.get(nameError).touched) {
-       return '';
-    // }
-    // const errors = this.formLogin.get(nameError).errors || {};
-    // const error = Object.keys(errors)[0];
+//  getError(nameError: string): string {
+//     if (!this.formLogin.get(nameError).touched) {
+//        return '';
+//     }
+//     const errors = this.formLogin.get(nameError).errors || {};
+//     const error = Object.keys(errors)[0];
 
-    // return this.messageError[nameError][error];
-   }
+//     return this.messageError[nameError][error];
+//    }
+
+
+getError(nameError: string = ''): string {
+  if (!this.formLogin.get(nameError).touched) {
+    return '';
+  }
+  const errors = this.formLogin.get(nameError).errors || {};
+  const error = Object.keys(errors)[0];
+  type typeMessage = typeof this.messageError;
+  const objectMsg = this.messageError[nameError as keyof typeMessage];
+  type typeObject = typeof objectMsg;
+  return objectMsg[error as keyof typeObject];
+}
 }
 
 

@@ -16,16 +16,16 @@
                 <label for="emailAddress" class="labelUser">Email address</label>
                 <input type="text" class="form-control" formControlName="emailAddress" placeholder="sncndic@gmail.com">
 
-                <div *ngIf="getError('email')">
+                <div *ngIf="getError('emailAddress')">
                     <div class="error modal-error">
-                        {{ getError("email") }}
+                        {{ getError("emailAddress") }}
                     </div>
                 </div>
             </div>
 
             <div>
                 <label for="password" class="labelPass">Password</label>
-                <input type="password" class="form-control" formControlName="password" placeholder=" Enter your pasword ">
+                <input  type="password" class="form-control" formControlName="password" placeholder=" Enter your pasword ">
 
 
                 <div *ngIf="getError('password')">
