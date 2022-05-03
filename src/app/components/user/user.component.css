@@ -1,7 +1,7 @@
 .container {
     margin: none;
     width: auto;
-    padding: 2px;
+    padding: 40px;
 
 }
 
@@ -26,37 +26,117 @@
     padding: 20px 40px;
     justify-content: space-between;
 }
-p{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    /* margin-right: 1220.24px; */
-}
+
 
 .cuadriculas {
+    display:block;
     float: left;
     margin-right: 20px;
+    height: 870px;
+
 }
 
 .cardUser {
-    display: flex;
+    display: block;
     border-radius: 20px;
     background: white;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-    justify-content: space-between;
 }
+
+
+.NameFirstName{
+    margin-top: 45px;
+}
+
+.NameFirstName label{
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-right: 385px;
+    align-items: center;
+}
+
+.info1{
+    margin-top: 12px;
+}
+
+.info1 label{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 400px;
+    align-items: center;
+    color: #AAAAAA;
+}
+
+
+.lastNameNumber{
+    margin-top: 38px;
+}
+
+.lastNameNumber label{
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-right: 335px;
+    align-items: center;
+}
+
+.info2{
+    margin-top: 12px;
+}
+
+.info2 label{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 385px;
+    align-items: center;
+    color: #AAAAAA;
+}
+
+.emailID{
+    margin-top: 38px;
+}
+
+.emailID label{
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-right: 390px;
+    align-items: center;
+}
+
+.info3{
+    margin-top: 12px;
+}
+
+.info3 label{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 190px;
+    align-items: center;
+    color: #AAAAAA;
+}
+
 
 .cardUser-info {
     padding: 90px;
     width: 693px;
-    height: 551px;
-    display: grid;
-    grid-template-columns: 0.8fr 0.8fr;
-    /* align-items: center ; */
-  
+}
+
+.imgName{
+    display:flex;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    align-items: center;
+
 }
 
 .cardPrint {
-    /* margin: 10px; */
     border-radius: 20px;
     overflow: hidden;
     background: white;
@@ -68,38 +148,34 @@ p{
 }
 
 .cardPrint-print {
-    padding-left: 89px;
-    padding-top: 61px;
-    padding-bottom: 65px;
-    padding-right: 89px;
-    padding-left: 89px;
-    width: 693px;
-    height: 215px;
+    padding: 55px;
     display: grid;
     grid-template-columns: 0.8fr 0.8fr;
+    align-items: center;
 }
 
 .h1Print {
     font-family: 'Inter', sans-serif;
     font-size: 24px;
     font-weight: 600;
-    padding-top: 50px;
+
     padding-bottom: 28px;
 }
 
 .download {
     text-align: right;
-    width: 112px;
-    height: 109px;
-    /* margin-left: 400px; */
-    padding-top: 55px;
+    width: 100px;
+    height: 100px;
     margin-left: 279px;
-    padding-bottom: 60px;
+    cursor: pointer;
+
 }
 
-p {
+
+
+.parrafoPrint {
     font-family: 'Inter', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     color: #AAAAAA;
 }
@@ -115,31 +191,33 @@ p {
 }
 
 .cardNoMessage-message {
-    padding-top: 217px;
-    /* padding-bottom: 65px; */
-    padding-right: 219px;
-    padding-left: 219px;
+    padding: 28px;
+    padding-bottom: 0 !important;
     text-align: center;
     height: 870px;
 }
 
-
-/* .imagenNoMessage {} */
-
-.perfil {
-    width: 112px;
-    height: 109px;
-    margin-right: 287px;
+.imagenNoMessage{
+    margin-top: 189px;
+    
+    width: 330px;
+    height: 289px;
 }
 
-.labelName {
-    text-align: center;
-    font-size: 24px;
+.noMessage{
+    margin-top: 30px;
     font-family: 'Inter', sans-serif;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: 700;
 }
 
-.contendoCard {
-    display: grid;
-    grid-template-columns: 0.8fr 0.8fr;
+.whenyou{
+    margin-top: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #9E9E9E;
+
 }
+
+

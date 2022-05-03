@@ -7,11 +7,29 @@
     <img routerLink="/login" src="../../../assets/previous page.png" >
     </div>
 
+<div class="card">
+    
+    <h1>Users</h1>
+    <div class=" card-title-filter">
+        <div class="searchs">
+            <input class="search" type="search" placeholder="Search for...">
+            <input class="searchName" type="search" name="Search" placeholder="Name" >
+            <input class="searchDate" type="search" name="Search" placeholder="Date" >
+        </div>
+        <div class="select">
+            <!-- <input class="options" type="search" name="Search" placeholder="Date" > -->
+            <select class="options" name="Sort By" id="">
+                <option value="">Sort by</option>
+                <option value="">option1</option>
+                <option value="">option2</option>
+                <option value="">option3</option>
 
-    <div class="card card-title-filter">
-        <h1>Users</h1>
-        <input class="buscar" type="search" placeholder="search">
+            </select>
+        </div>
     </div>
+</div>
+    
+
 <div class="card card-info">
 
     <app-user-table [rowData]="rowData" [colData]="colData"></app-user-table>

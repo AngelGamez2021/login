@@ -23,5 +23,10 @@ export class UserService {
 
   updateUser(id: string): Observable<any>{
     return this.http.get(this.url + id);
+    
   }
+
+
+
+  // creear un servicio para leer la informacion y leguo usar la interpolacion
 }
