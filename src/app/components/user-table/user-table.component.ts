@@ -15,7 +15,8 @@ export class UserTableComponent implements OnInit {
 
 
   gridData: any[] = [];
-  titleData: any[] = [];
+  titleData: any[] = []; 
+  infoData: any[] = [];
 
   constructor(
     private router: Router,
@@ -44,14 +45,15 @@ export class UserTableComponent implements OnInit {
 
    editUser(id: string){
      this._userService.updateUser(id).subscribe(data => {
-      console.log(id);
-      this.router.navigate(['/editUser/', id])
+      console.log('Informacion',data);
+      this.router.navigate(['/editUser/', id]);
+
      }, error => {
        console.log(error);
-     
-
-     })
-   
+       
+       
+      })
+      
     }
  
 }

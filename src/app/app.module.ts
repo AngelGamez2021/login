@@ -15,6 +15,8 @@ import {HttpClientModule} from '@angular/common/http'
 //formularios
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserTableComponent } from './components/user-table/user-table.component';
+import { ModalDeleteComponent } from './components/modal-delete/modal-delete.component';
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { UserTableComponent } from './components/user-table/user-table.component
     CardsComponent,
     ModalEditUserComponent,
     UserComponent,
-    UserTableComponent
+    UserTableComponent,
+    ModalDeleteComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

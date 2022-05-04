@@ -14,11 +14,10 @@
     text-align: left;
     margin-bottom: 16px;
     padding-left:  40px;
-    /* position:sticky;
-    top:0; */
-
     
 }
+
+
 
 .card-title {
     display: flex;
@@ -45,12 +44,21 @@ p{
     top:0; */
 
 }
-
-.card-info{
-    padding: 20px 40px;
-
-
+.cardTable {
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+    text-align: left;
+    margin-bottom: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
 }
+
+
 
 h1 {
     font-family: 'Inter', sans-serif;
