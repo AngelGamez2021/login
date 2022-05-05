@@ -18,6 +18,14 @@ import { UserTableComponent } from './components/user-table/user-table.component
 import { ModalDeleteComponent } from './components/modal-delete/modal-delete.component';
 import { ErrorComponent } from './components/error/error.component';
 
+//NgRx
+import { AppReducers } from './store/app.reducers';
+import { environment } from 'src/environments/environment';
+import { StoreModule } from '@ngrx/store';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools'
+import {EffectsModule} from '@ngrx/effects'
+import { EffectsArray } from './store/effects';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +42,13 @@ import { ErrorComponent } from './components/error/error.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot(AppReducers),
+    EffectsModule.forRoot(EffectsArray),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Retains last 25 states
+      logOnly: environment.production, // Restrict extension to log-only mode
+    }),
 
   ],
   providers: [],

@@ -16,7 +16,7 @@ export class UserTableComponent implements OnInit {
 
   gridData: any[] = [];
   titleData: any[] = []; 
-  infoData: any[] = [];
+  infoData!: User[];
 
   constructor(
     private router: Router,
@@ -29,25 +29,25 @@ export class UserTableComponent implements OnInit {
   ngOnChanges() {
     this.gridData = this.rowData;
     this.titleData = this.colData;
-    
   }
+ 
 
-
-
+  
   removeUser(id: string){
     this._userService.deleteUser(id).subscribe(data =>{
       console.log(id);
       this.router.navigate(['/cardList']);
-     }, error =>{
-       console.log(error);
+    }, error =>{
+      console.log(error);
     })
-   }
+  }
 
    editUser(id: string){
      this._userService.updateUser(id).subscribe(data => {
-      console.log('Informacion',data);
-      this.router.navigate(['/editUser/', id]);
-
+       console.log('Informacion',data);
+       this.router.navigate(['/editUser/', id]);
+       this.infoData = data;
+       
      }, error => {
        console.log(error);
        
