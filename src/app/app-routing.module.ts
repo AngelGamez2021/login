@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'signUp', component: SignUpComponent},
   {path: 'cardList', component: CardsComponent},
-  {path: 'user', component: UserComponent},
+  {path: 'user/:id', component: UserComponent},
   {path: 'editUser/:id', component: ModalEditUserComponent},
   {path: 'deleteUser', component: ModalDeleteComponent},
   {path: 'error', component: ErrorComponent},

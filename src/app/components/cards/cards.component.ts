@@ -48,27 +48,29 @@ export class CardsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // this.readUser();
+    this.readUser();
 
 
 
 
-    this.store.select('users').subscribe(({usuario}) =>{
-      this.rowData = usuario;
-    })
+    // this.store.select('users').subscribe(({usuario}) =>{
+    //   this.rowData = usuario;
+    // })
 
-    this.store.dispatch(readUser());
+    // this.store.dispatch(readUser());
 
   }
 
 
-  // readUser() {
-  //   this._userService.getUsers().subscribe(data => {
-  //     this.rowData = data;
-  //   }, error => {
-  //     console.log(error);
-  //   })
-  // }
+  readUser() {
+    this._userService.getUsers().subscribe(data => {
+      this.rowData = data;
+      console.log('lista de usuarios',data);
+      
+    }, error => {
+      console.log(error);
+    })
+  }
 
 
   //  readUser(){

@@ -15,6 +15,7 @@
     transition: all 400ms ease;
     text-align: left;
     margin-bottom: 16px;
+    
 }
 
 
@@ -25,6 +26,7 @@
     font-size: 22px;
     padding: 20px 40px;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 
@@ -44,81 +46,111 @@
 }
 
 
-.NameFirstName{
+.PrimeraInfo{
+    display: grid;
+    grid-template-columns: 0.8fr 0.4fr;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 45px;
+    margin-right: 0 !important;
+    font-family: 'Inter', sans-serif;
 }
 
-.NameFirstName label{
-    font-family: 'Inter', sans-serif;
+#name{
+    margin-bottom: 12px;
     font-size: 24px;
     font-weight: 400;
-    margin-right: 385px;
-    align-items: center;
 }
 
-.info1{
-    margin-top: 12px;
+#firtsName{
+    margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: 400;
 }
 
-.info1 label{
-    font-family: 'Inter', sans-serif;
+#infoName{
     font-size: 20px;
     font-weight: 400;
-    margin-right: 400px;
-    align-items: center;
+    color: #AAAAAA;
+}
+
+#infoFirtstName{
+    font-size: 20px;
+    font-weight: 400;
     color: #AAAAAA;
 }
 
 
-.lastNameNumber{
-    margin-top: 38px;
+.segundaInfo{
+    display: grid;
+    grid-template-columns: 0.8fr 0.4fr;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 45px;
+    margin-right: 0 !important;
+    font-family: 'Inter', sans-serif;
 }
 
-.lastNameNumber label{
-    font-family: 'Inter', sans-serif;
+#lastName{
+    margin-bottom: 12px;
     font-size: 24px;
     font-weight: 400;
-    margin-right: 335px;
-    align-items: center;
 }
 
-.info2{
-    margin-top: 12px;
+#number{
+    margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: 400;
 }
 
-.info2 label{
-    font-family: 'Inter', sans-serif;
+#infoLastName{
     font-size: 20px;
     font-weight: 400;
-    margin-right: 385px;
-    align-items: center;
     color: #AAAAAA;
 }
 
-.emailID{
-    margin-top: 38px;
-}
-
-.emailID label{
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    margin-right: 390px;
-    align-items: center;
-}
-
-.info3{
-    margin-top: 12px;
-}
-
-.info3 label{
-    font-family: 'Inter', sans-serif;
+#infoNumber{
     font-size: 20px;
     font-weight: 400;
-    margin-right: 190px;
-    align-items: center;
     color: #AAAAAA;
 }
+
+
+
+.terceraInfo{
+    display: grid;
+    grid-template-columns: 0.8fr 0.4fr;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 45px;
+    margin-right: 0 !important;
+    font-family: 'Inter', sans-serif;
+}
+
+#email{
+    margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#id{
+    margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#infoEmail{
+    font-size: 20px;
+    font-weight: 400;
+    color: #AAAAAA;
+}
+
+#infoId{
+    font-size: 20px;
+    font-weight: 400;
+    color: #AAAAAA;
+}
+
 
 
 .cardUser-info {

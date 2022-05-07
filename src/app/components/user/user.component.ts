@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { User } from 'src/app/interfaces/user.interface';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-user',
@@ -7,9 +10,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  labels = {
+    userName: '',
+    firstName: '',
+    lastName: '',
+    phoneNumber: 0,
+    emailAddress: '',
+  }
+  id: string | null;
+
+  constructor(private aRoute: ActivatedRoute,
+    private _userService: UserService) {
+
+    this.id = this.aRoute.snapshot.paramMap.get('id')
+    console.log('Este es el id seleccionado', this.id);
+    
+
+  }
+
 
   ngOnInit(): void {
+    this.user();
   }
+
+  user(){
+    if(this.id != null){
+
+       this._userService.updateUser(this.id).subscribe(data =>{
+         this.labels = data;
+         console.log('seeData', this.labels);
+        
+       })
+      
+    }
+  }
+
+
 
 }

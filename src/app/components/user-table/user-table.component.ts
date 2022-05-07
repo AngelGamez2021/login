@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 import { User } from '../../interfaces/user.interface';
 
@@ -15,45 +15,78 @@ export class UserTableComponent implements OnInit {
 
 
   gridData: any[] = [];
-  titleData: any[] = []; 
+  titleData: any[] = [];
   infoData!: User[];
+  seeData!: User[];
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private _userService: UserService) { }
 
   ngOnInit(): void {
-    
+
   }
 
   ngOnChanges() {
     this.gridData = this.rowData;
     this.titleData = this.colData;
   }
- 
 
-  
-  removeUser(id: string){
-    this._userService.deleteUser(id).subscribe(data =>{
+
+
+  removeUser(id: string) {
+    this._userService.deleteUser(id).subscribe(data => {
       console.log(id);
-      this.router.navigate(['/cardList']);
-    }, error =>{
+      const newGridData = this.gridData.filter((dataId) => dataId.id !== id)
+      console.log('nueva lista', newGridData);
+      this.gridData = newGridData;
+
+
+    }, error => {
       console.log(error);
     })
   }
 
-   editUser(id: string){
-     this._userService.updateUser(id).subscribe(data => {
-       console.log('Informacion',data);
-       this.router.navigate(['/editUser/', id]);
-       this.infoData = data;
-       
-     }, error => {
-       console.log(error);
-       
-       
-      })
-      
-    }
- 
+  //al presionar el boton eliminar, creamos un nuevo array y filtramos el grid data 
+  // y comparamos el id, y luego nuevamente usamos el grid data y 
+  // eso sera igual al nuevo grid para que acutalice la tabla 
+
+
+
+  editUser(id: string) {
+    this._userService.updateUser(id).subscribe(data => {
+      console.log('Informacion', data);
+      this.infoData = data;
+       this.router.navigate(['/editUser', id]);
+
+    }, error => {
+      console.log(error);
+
+
+    })
+
+  }
+
+
+
+
+  seeUser(id: string) {
+    this._userService.updateUser(id).subscribe(data => {
+
+      this.seeData = data;
+
+      console.log('Informacion', data);
+
+      this.router.navigate(['/user/', id]);
+
+    }, error => {
+      console.log(error);
+
+
+    })
+
+  }
+
+
 }
