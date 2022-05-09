@@ -29,9 +29,8 @@ export class UserService {
     return this.http.get(this.url + id);
   }
 
-  // getUser(id: string): Observable<any>{
-  //   return this.http.get(this.url + id).snapshotChanges();
-  // }
+
+
 
 
 }

@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: 'editUser/:id', component: ModalEditUserComponent},
   {path: 'deleteUser', component: ModalDeleteComponent},
   {path: 'error', component: ErrorComponent},
-  {path: '**', redirectTo: 'error'}
+  {path: '**', pathMatch:'full', redirectTo: 'error'}
 
 ];
 

@@ -1,3 +1,7 @@
+import { NgbDate, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -49,6 +53,7 @@ import { EffectsArray } from './store/effects';
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
+    NgbModule
 
   ],
   providers: [],

@@ -3,7 +3,7 @@
         <thead>
             <tr class="sticky">
                 <th>
-                    <input type="checkbox" class="check" />
+                    <input type="checkbox" class="check"  />
                 </th>
                 <th *ngFor="let data of titleData">
                     <p class="titles">{{ data.text }}</p>
@@ -15,7 +15,7 @@
             <tr *ngFor="let user of gridData">
 
                 <td>
-                    <input type="checkbox" class="check" />
+                    <input type="checkbox" class="check"  />
                 </td>
                 <!-- <td>
                    <img src="../../../assets/perfil-del-usuario.png"> 
@@ -24,14 +24,14 @@
                     <p class="info">{{user.userName}}</p>
                 </td>
                 <td>
-                    <p class="info">987654321</p>
+                    <p class="info">{{user.phoneNumber}}</p>
                 </td>
                 <td>
 
                     <p class="info">{{user.emailAddress}}</p>
                 </td>
                 <td>
-                    <p class="info"> May,1,2022</p>
+                    <p class="info"> {{user.createdAt}}</p>
                 </td>
 
                 <td>

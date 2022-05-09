@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { UserService } from 'src/app/services/user.service';
 import { User } from '../../interfaces/user.interface';
+import { ModalEditUserComponent } from '../modal-edit-user/modal-edit-user.component';
 
 @Component({
   selector: 'app-user-table',
@@ -23,6 +25,8 @@ export class UserTableComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private _userService: UserService) { }
+
+    
 
   ngOnInit(): void {
 
@@ -56,9 +60,10 @@ export class UserTableComponent implements OnInit {
 
   editUser(id: string) {
     this._userService.updateUser(id).subscribe(data => {
-      console.log('Informacion', data);
+      
       this.infoData = data;
-       this.router.navigate(['/editUser', id]);
+      this.router.navigate(['/editUser', id]);
+
 
     }, error => {
       console.log(error);
@@ -75,11 +80,7 @@ export class UserTableComponent implements OnInit {
     this._userService.updateUser(id).subscribe(data => {
 
       this.seeData = data;
-
-      console.log('Informacion', data);
-
       this.router.navigate(['/user/', id]);
-
     }, error => {
       console.log(error);
 

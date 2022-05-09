@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { ActivatedRoute } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-modal-edit-user',
@@ -8,9 +10,39 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 })
 export class ModalEditUserComponent implements OnInit {
 
-  constructor( ) { }
+  labels = {
+    userName: '',
+    firstName: '',
+    lastName: '',
+    phoneNumber: 0,
+    emailAddress: '',
+    id: 0,
+  }
+
+  id: string | null;
+
+  constructor(private aRoute: ActivatedRoute,
+    private _userService: UserService) {
+
+    this.id = this.aRoute.snapshot.paramMap.get('id')
+    console.log('id de usuario a editar', this.id);
+  }
 
   ngOnInit(): void {
+
+    this.userEdit();
+  }
+
+  userEdit() {
+    if (this.id != null) {
+
+      this._userService.updateUser(this.id).subscribe(data => {
+        this.labels = data;
+        console.log('Usuario a editar', this.labels);
+
+      })
+
+    }
   }
 
 }

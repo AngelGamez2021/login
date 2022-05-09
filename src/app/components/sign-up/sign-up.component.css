@@ -47,6 +47,7 @@
     grid-template-columns: 0.8fr 0.8fr;
     grid-gap: 10px;
     margin-bottom: 12px;
+    
 }
 
 .labelMargin {
@@ -65,7 +66,7 @@
     padding: 15px 24px;
     padding-right: 40px !important;
     font-family: 'Inter', sans-serif;
-    opacity: 70%;
+    opacity: 85%;
     font-weight: 400;
     border-radius: 10px;
     color: #6B6B6B;
