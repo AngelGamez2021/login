@@ -26,8 +26,13 @@
                 </div>
                 <div>
                     <label for="phoneNumer" class="labelPass">Phone number</label><br>
-                    <input type="text" value="{{labels.phoneNumber}}">
+                    <input type="text" required pattern=" /^\d*$/.test(value)" value="{{labels.phoneNumber}}">
                 </div>
+
+
+                
+
+
 
                 <div>
                     <label for="id" class="labelPass">ID</label><br>

@@ -24,6 +24,7 @@
 .titles {
     display: grid;
     grid-template-columns: 0.8fr 0.8fr;
+
 }
 
 .title {
@@ -41,6 +42,7 @@
     margin-bottom: 68px;
     font-weight: 700;
     color: #DBDBDB !important;
+    cursor:pointer;
 }
 
 label {

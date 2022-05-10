@@ -4,6 +4,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { UserService } from 'src/app/services/user.service';
 import { User } from '../../interfaces/user.interface';
 import { ModalEditUserComponent } from '../modal-edit-user/modal-edit-user.component';
+import {ToastrService} from 'ngx-toastr'
+
+
 
 @Component({
   selector: 'app-user-table',
@@ -24,7 +27,8 @@ export class UserTableComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private _userService: UserService) { }
+    private _userService: UserService,
+    private toastrSrv: ToastrService) { }
 
     
 
@@ -44,6 +48,8 @@ export class UserTableComponent implements OnInit {
       console.log(id);
       const newGridData = this.gridData.filter((dataId) => dataId.id !== id)
       console.log('nueva lista', newGridData);
+    this.toastrSrv.error('removed to user list', 'User Remove')
+
       this.gridData = newGridData;
 
 

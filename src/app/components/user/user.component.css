@@ -15,7 +15,9 @@
     transition: all 400ms ease;
     text-align: left;
     margin-bottom: 16px;
+    padding-left: 40px;
     
+
 }
 
 
@@ -26,12 +28,18 @@
     font-size: 22px;
     padding: 20px 40px;
     justify-content: space-between;
-    cursor: pointer;
+    height: 45px !important;
+    align-items: center;
+
+}
+
+#back{
+    cursor:pointer
 }
 
 
 .cuadriculas {
-    display:block;
+    display: block;
     float: left;
     margin-right: 20px;
     height: 870px;
@@ -46,7 +54,7 @@
 }
 
 
-.PrimeraInfo{
+.PrimeraInfo {
     display: grid;
     grid-template-columns: 0.8fr 0.4fr;
     align-items: center;
@@ -56,32 +64,32 @@
     font-family: 'Inter', sans-serif;
 }
 
-#name{
+#name {
     margin-bottom: 12px;
     font-size: 24px;
     font-weight: 400;
 }
 
-#firtsName{
+#firtsName {
     margin-bottom: 12px;
     font-size: 24px;
     font-weight: 400;
 }
 
-#infoName{
+#infoName {
     font-size: 20px;
     font-weight: 400;
     color: #AAAAAA;
 }
 
-#infoFirtstName{
+#infoFirtstName {
     font-size: 20px;
     font-weight: 400;
     color: #AAAAAA;
 }
 
 
-.segundaInfo{
+.segundaInfo {
     display: grid;
     grid-template-columns: 0.8fr 0.4fr;
     align-items: center;
@@ -91,25 +99,25 @@
     font-family: 'Inter', sans-serif;
 }
 
-#lastName{
+#lastName {
     margin-bottom: 12px;
     font-size: 24px;
     font-weight: 400;
 }
 
-#number{
+#number {
     margin-bottom: 12px;
     font-size: 24px;
     font-weight: 400;
 }
 
-#infoLastName{
+#infoLastName {
     font-size: 20px;
     font-weight: 400;
     color: #AAAAAA;
 }
 
-#infoNumber{
+#infoNumber {
     font-size: 20px;
     font-weight: 400;
     color: #AAAAAA;
@@ -117,7 +125,7 @@
 
 
 
-.terceraInfo{
+.terceraInfo {
     display: grid;
     grid-template-columns: 0.8fr 0.4fr;
     align-items: center;
@@ -127,25 +135,25 @@
     font-family: 'Inter', sans-serif;
 }
 
-#email{
+#email {
     margin-bottom: 12px;
     font-size: 24px;
     font-weight: 400;
 }
 
-#id{
+#id {
     margin-bottom: 12px;
     font-size: 24px;
     font-weight: 400;
 }
 
-#infoEmail{
+#infoEmail {
     font-size: 20px;
     font-weight: 400;
     color: #AAAAAA;
 }
 
-#infoId{
+#infoId {
     font-size: 20px;
     font-weight: 400;
     color: #AAAAAA;
@@ -158,8 +166,8 @@
     width: 693px;
 }
 
-.imgName{
-    display:flex;
+.imgName {
+    display: flex;
     justify-content: space-between;
     font-family: 'Inter', sans-serif;
     font-size: 24px;
@@ -229,21 +237,21 @@
     height: 870px;
 }
 
-.imagenNoMessage{
+.imagenNoMessage {
     margin-top: 189px;
-    
+
     width: 330px;
     height: 289px;
 }
 
-.noMessage{
+.noMessage {
     margin-top: 30px;
     font-family: 'Inter', sans-serif;
     font-size: 28px;
     font-weight: 700;
 }
 
-.whenyou{
+.whenyou {
     margin-top: 8px;
     font-family: 'Inter', sans-serif;
     font-size: 18px;
@@ -251,5 +259,3 @@
     color: #9E9E9E;
 
 }
-
-

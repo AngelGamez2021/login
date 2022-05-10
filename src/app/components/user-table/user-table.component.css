@@ -1,7 +1,30 @@
 .table {
-  padding: 20px 40px;
-   }
 
+  padding-left: 43px;
+
+  height: 600px;
+  overflow: scroll;
+  overflow-x: hidden;
+  justify-content: space-between;
+}
+
+thead tr th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffff;
+}
+
+/* fondo del scroll */
+.table::-webkit-scrollbar {
+  width: 7px;
+  background: #E1E1E1;
+}
+
+/* barrita que se desliza */
+.table::-webkit-scrollbar-thumb {
+  background: #bdbcbc;
+}
 
 
 
@@ -11,29 +34,33 @@
   background: #E1E1E1;
   box-sizing: border-box;
   border-radius: 8px;
-  margin-bottom: 35px !important;
+  margin-bottom: 23px !important;
   margin-right: 31px !important;
-  margin-top: 35px !important;
-  
+  margin-top: 30px !important;
+
+
 }
 
 .table .titles {
-  margin-bottom: 35px !important;
-  margin-right: 10px !important;
+  margin-bottom: 30px !important;
+  margin-right: 180px !important;
   margin-top: 35px !important;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 18px;
   color: #1D1E29;
-
-
-
 }
 
+#imageProfile{
+  height: 51px;
+}
+
+
+
 .table .info {
-  margin-bottom: 35px !important;
-  margin-right: 180px !important; 
-  margin-top: 35px !important;
+  margin-bottom: 30px !important;
+  margin-right: 90px !important;
+  margin-top: 30px !important;
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -42,10 +69,10 @@
 }
 
 .table .image {
-  margin-bottom: 35px !important;
-  margin-right: 160px !important;
-  margin-top: 35px !important;
+  margin-bottom: 30px !important;
+  margin-right: 65px !important;
+  margin-top: 30px !important;
   text-align: center;
   cursor: pointer;
-
 }
+

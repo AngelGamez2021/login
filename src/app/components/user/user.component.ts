@@ -16,6 +16,7 @@ export class UserComponent implements OnInit {
     lastName: '',
     phoneNumber: 0,
     emailAddress: '',
+    id: '',
   }
   id: string | null;
 

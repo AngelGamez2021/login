@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/app/interfaces/user.interface';
 import { UserService } from 'src/app/services/user.service';
+import {ToastrService} from 'ngx-toastr'
 
 @Component({
   selector: 'app-sign-up',
@@ -49,7 +50,8 @@ export class SignUpComponent implements OnInit {
 
   constructor(private fb: FormBuilder,
     private router: Router,
-    private _userService: UserService) {
+    private _userService: UserService,
+    private toastrSrv: ToastrService) {
   }
 
   ngOnInit(): void {
@@ -100,7 +102,7 @@ export class SignUpComponent implements OnInit {
 
 
     this._userService.createUser(USER).subscribe(data => {
-      // this.toastr.success('El producto fue registrado con exito!', 'Producto Registrado');
+    this.toastrSrv.success('added to user list', 'User Add')
       this.router.navigate(['/cardList']);
     }, error => {
       console.log(error);

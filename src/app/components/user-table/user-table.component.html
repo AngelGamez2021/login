@@ -3,7 +3,7 @@
         <thead>
             <tr class="sticky">
                 <th>
-                    <input type="checkbox" class="check"  />
+                    <input type="checkbox" class="check"/>
                 </th>
                 <th *ngFor="let data of titleData">
                     <p class="titles">{{ data.text }}</p>
@@ -17,10 +17,9 @@
                 <td>
                     <input type="checkbox" class="check"  />
                 </td>
-                <!-- <td>
-                   <img src="../../../assets/perfil-del-usuario.png"> 
-                </td> -->
+              
                 <td>
+                <img id="imageProfile" src="../../../assets/perfil-del-usuario.png"> 
                     <p class="info">{{user.userName}}</p>
                 </td>
                 <td>
@@ -31,7 +30,7 @@
                     <p class="info">{{user.emailAddress}}</p>
                 </td>
                 <td>
-                    <p class="info"> {{user.createdAt}}</p>
+                    <p  class="info"> {{user.createdAt}}</p>
                 </td>
 
                 <td>

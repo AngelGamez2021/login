@@ -1,4 +1,5 @@
 import { NgbDate, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms'; 
 
 
 
@@ -29,6 +30,10 @@ import { StoreModule } from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools'
 import {EffectsModule} from '@ngrx/effects'
 import { EffectsArray } from './store/effects';
+import { FilterPipe } from './pipes/filter.pipe';
+
+import {ToastrModule} from 'ngx-toastr'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -40,7 +45,8 @@ import { EffectsArray } from './store/effects';
     UserComponent,
     UserTableComponent,
     ModalDeleteComponent,
-    ErrorComponent
+    ErrorComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -53,7 +59,10 @@ import { EffectsArray } from './store/effects';
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
 
   ],
   providers: [],
